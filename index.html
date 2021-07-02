@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  
+    <meta content="text/html" charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatica Moderna</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!--PROBANDO SINCRONIZACION CON ONEDRIVE-->
+    <!-- ESTE ES EL MENU QUE LO HICE DE VUELTA CON FLEXBOX   -->
+    <header>
+        <!-- ACA VA EL LOGO A LA IZQUIERDA Y UNOS ICONOS A LA DERECHA, ESTO VA ARRIBA DEL TODO   -->
+        <nav class="claseGridLogo">
+            
+               <a href="index.html"><img src="img\logo-informatica-moderna.JPG" class="logoGrid" width="150" height="100" alt="logo"></a> 
+                <p class="iconosGrid"><a href="https://wa.me/598996886379" target="_blank"><ion-icon name="logo-whatsapp" size="large" ></ion-icon></a><a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter" size="large" style="color: cadetblue"></ion-icon></a><a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></p>
+            
+        
+        </nav>
+        <nav>
+          <ul class="menu__Flexbox">
+              <li ><a href="index.html">Inicio</a></li>
+              <li ><a href="secciones\sobrenosotros.html">Sobre Nosotros</a></li>
+              <li> <a href="secciones\servicios.html">Servicios</a></li>
+              <li><a href="secciones\software.html">Software</a></li>
+              <li><a href="secciones\contacto.html">Contacto</a></li>             
+          </ul>
+         
+        </nav>
+    </header> 
+    
+    <main>
+        <!-- ACA ES EL TITULO H1 Y LE AGREGUE UNA CLASE PARA INCORPORAR UNA IMAGEN DE BACKGROUND DESDE CSS   -->
+        <div class="imagenPrincipal">
+            <h1 class="claseDeSeccion1__titulo1--portada">Informatica Moderna</h1>
+        </div>  
+        
+        <!-- SECCION PRINCIPAL, ENCUADRA TODA LA PAGINA   -->
+        <section class="claseDeSeccion1">
+  	        
+            <h2 class="claseDeSeccion1__titulo2">Quienes Somos</h2>
+            <table class="claseDeSeccion1__parrafo1">
+                <tr>
+                    <td><img src="img\fotoprincipal.jpg" class="claseDeSeccion1__redondeado"  width="140" height="100" alt="Foto principal"></td>
+                    <td><p>Somos una empresa informática con foco en infraestructura y desarrollo de software, combinamos los dos mundos para satisfacer las necesidades de nuestros clientes, brindando soluciones modernas para pequeñas y grandes empresas. Brindamos un alto nivel de atención en entender la necesidad del cliente para resolver obstáculos y desafíos en tiempo y forma. Somos un equipo joven con amplia experiencia en el rubro orientado a crecer y dinamizar los requerimientos del negocio.</p></td>
+                </tr>
+            </table>
+        
+           <!-- SECCION DE SERVICIOS PRINCIPALES, ACA INCORPORE  ! FLEXBOX !   -->
+            <h2 class="claseDeSeccion1__titulo2">Servicios Principales</h2>
+            
+            <section class="flexbox__Padre">
+                <div class="flexbox__Hijo"><img src="img\tecnologia.png" width="50px" height="50px"  alt="infra"><p class="flexbox__Hijo--parrafos">Infraestructura</p><br><p class="flexbox__Hijo--subtitulo" >Nivel 1,2 y 3 tecnologia Microsoft</p></div>
+                <div class="flexbox__Hijo"><img src="img\mensajeria-en-la-nube.png" width="50px" height="50px" alt="nube"><p class="flexbox__Hijo--parrafos">Nube</p><br><p class="flexbox__Hijo--subtitulo">Implementación o migración de servicios en la nube</p></div>
+                <div class="flexbox__Hijo"><img src="img\tecnologia2.png" width="50px" height="50px" alt="soporte"><p class="flexbox__Hijo--parrafos">Soporte</p><br><p class="flexbox__Hijo--subtitulo">Contrato a demanda con un paquete de horas</p></div>
+                <div class="flexbox__Hijo"><img src="img\tecnologia3.png" width="50px" height="50px" alt="consultoria"><p class="flexbox__Hijo--parrafos">Consultoria</p><br><p class="flexbox__Hijo--subtitulo">Asesoramiento en toma de decisiones de futuros proyectos</p></div>
+                <div class="flexbox__Hijo"><img src="img\software.png" width="50px" height="50px" alt="desarrollo"><p class="flexbox__Hijo--parrafos">Desarrollo</p><br><p class="flexbox__Hijo--subtitulo">Software a la medida de sus necesidades</p></div>
+                <div class="flexbox__Hijo"><img src="img\seguridad-informatica.png" width="50px" height="50px" alt="seguridad"><p class="flexbox__Hijo--parrafos">Seguridad y Respaldos</p><br><p class="flexbox__Hijo--subtitulo">Buen uso de respaldos y buenas practicas</p></div>
+                <div class="flexbox__Hijo"><img src="img\dominio.png" width="50px" height="50px" alt="web"><p class="flexbox__Hijo--parrafos">Paginas Web</p><br><p class="flexbox__Hijo--subtitulo">Sitios web adaptables a las necesidades de su empresa</p></div>
+                <div class="flexbox__Hijo"><img src="img\factura.png" width="50px" height="50px" alt="factelect"><p class="flexbox__Hijo--parrafos">Facturacion electronica</p><br><p class="flexbox__Hijo--subtitulo">Contamos con varias opciones a su alcance</p></div>
+            </section>
+          
+
+        
+             <!-- SECCION DE CLIENTES Y ALIANZAS   -->
+            <section>
+                <h2 class="claseDeSeccion1__titulo2--margenextra">Nuestros Clientes</h2>
+                <nav class="claseGridClientes">
+            
+                    <img src="img\cliente1.jpg" class="cliente1" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente2.jpg" class="cliente2" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente3.jpg" class="cliente3" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente4.jpg" class="cliente4" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente5.jpg" class="cliente5" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente6.jpg" class="cliente6" width="50px" height="50px" alt="logo">
+                    <img src="img\cliente7.jpg" class="cliente7" width="50px" height="50px" alt="logo">
+                </nav>
+                <div class="claseDeSeccion1__parrafo1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet sit excepturi eaque, eum sequi architecto praesentium incidunt voluptates similique facere nobis provident? Unde, qui incidunt corporis asperiores accusantium minus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum maxime sed laborum doloribus voluptates eligendi, est qui nam ratione dolore at officia facilis. Dolor itaque facilis aut numquam eos.</p>
+                </div>
+            </section>
+            
+        
+            
+            
+                
+            <section>
+                <h2 class="claseDeSeccion1__titulo2">Alianzas</h2>
+                <nav class="claseGridClientes">
+            
+                    <img src="img\alianza1.jpg" class="cliente1" alt="logo">
+                    <img src="img\alianza2.jpg" class="cliente2"  alt="logo">
+                    <img src="img\alianza3.jpg" class="cliente3" alt="logo">
+                    <img src="img\alianza4.jpg" class="cliente4" alt="logo">
+                    
+                </nav>
+                <div class=claseDeSeccion1__parrafo1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet sit excepturi eaque, eum sequi architecto praesentium incidunt voluptates similique facere nobis provident? Unde, qui incidunt corporis asperiores accusantium minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum accusamus reprehenderit vero adipisci quos unde dolor perferendis. Mollitia consequatur est nihil, quod nobis similique suscipit quidem velit maxime aspernatur?</p>
+                    
+                </div>
+            </section>
+            
+            
+            
+        
+        </section>
+    </main>
+    <!-- SECCION PIE DE PAGINA   -->
+    <footer class="footer">
+        <p>Autor: <span>Christian Sabat</span></p>
+        <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
+    </footer>
+    
+  </body>
+
+</html>

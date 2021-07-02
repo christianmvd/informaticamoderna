@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+   
+    <meta content="text/html" charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="..\css\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    
+    <header>
+      
+        <nav class="claseGridLogo">
+            
+          <a href="..\index.html"><img src="..\img\logo-informatica-moderna.JPG" class="logoGrid" width="150" height="100" alt="logo"></a> 
+          <p class="iconosGrid"><a href="https://wa.me/598996886379" target="_blank"><ion-icon name="logo-whatsapp" size="large" ></ion-icon></a><a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter" size="large" style="color: cadetblue"></ion-icon></a><a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></p>
+        </nav>
+        <nav>
+          <ul class="menu__Flexbox">
+            <li><a href="..\index.html">Inicio</a></li>
+            <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li> <a href="servicios.html">Servicios</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="contacto.html">Contacto</a></li>             
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="claseDeSeccion2">
+        
+        <h1 class="claseDeSeccion2__titulo1">Contacto</h1>
+        <section class="flexboxContacto">
+          <div class="flexboxContacto__Hijo"><ion-icon name="home-sharp" size="large"></ion-icon><p class="flexboxContacto__Hijo--parrafo">Dirección</p><br><p class="flexboxContacto__Hijo--subtitulo" >Simon Bolivar 1260</p></div>
+          <div class="flexboxContacto__Hijo"><ion-icon name="call-sharp" size="large"></ion-icon><p class="flexboxContacto__Hijo--parrafo">Teléfono</p><br><p class="flexboxContacto__Hijo--subtitulo">(+598)27074423</p></div>
+          <div class="flexboxContacto__Hijo"><ion-icon name="mail-sharp" size="large"></ion-icon><p class="flexboxContacto__Hijo--parrafo">Email</p><br><p class="flexboxContacto__Hijo--subtitulo">info@imoderna.com</p></div>
+          <div class="flexboxContacto__Hijo"><ion-icon name="alarm-sharp" size="large"></ion-icon><p class="flexboxContacto__Hijo--parrafo">Horario</p><br><p class="flexboxContacto__Hijo--subtitulo">Lun-Vie 9:00am - 6:00pm</p></div>
+          
+      </section>
+      <section class="flexboxContenedor">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="482" height="378" id="gmap_canvas" src="https://maps.google.com/maps?q=simon%20bolivar%201260&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://fmovies2.org">fmovies to</a><br><style>.mapouter{position:relative;text-align:right;height:378px;width:482px;}</style><a href="https://www.embedgooglemap.net">responsive google map embed</a>
+            <style>.gmap_canvas {overflow:hidden;background:none!important;height:378px;width:482px;}</style>
+          </div>
+        </div>
+        <div> 
+            <p class="flexboxContenedor__Titulo">CONTACTO</p><p class="flexboxContenedor__Subtitulo">Muchas gracias por confiar en nuestra empresa, por cualquier consulta o asesoramiento sobre nuestros servicios no dude en contactaron a traves del formulario que se encuentra debajo</p>
+        </div>
+      </section>
+    
+      
+      <section>
+        <div class=marcoFormulario>
+          <form  action="/prueba.php" method="POST" enctype="multipart/form-data">
+           <fieldset>
+            <legend class="claseDeSeccion2__legend">  Ingrese su solicitud </legend>
+            <div style="padding: 20px">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" maxlength="200" >
+              <br>
+              <label for="apellido">Apellido</label>
+              <input type="text" name="apellido" maxlength="200">
+              <br>
+              <label for="telefono">Telefono</label>
+              <input type="text" name="telefono" maxlength="20">
+              <br>
+              <label for="telefono">E-mail</label>
+              <input type="text" name="telefono" maxlength="20">
+            
+              <br>
+              <div>Soy Profesional en Informatica
+              <input type="checkbox" name="prof" value="1"></div>
+              <br>
+              <div>Seleccione su necesidad
+                <select name="necesidad">
+                  <option value="desarrollo">Desarrollo de Software</option>
+                  <option value="servicios1">Servicios Nivel 1</option>
+                  <option value="servicios2">Servicios Nivel 2</option>
+                  <option value="servicios3">Servicios Nivel 3</option>
+                </select>          
+              </div>
+              <br>
+              <label for="Comentarios">Ingrese comentarios</label>
+              <br/>
+              <textarea name="Comentarios" maxlength="600"></textarea>
+              <br/>
+              <input type="submit" name="submit" value="enviar">
+              <input type="reset" name="reset" value="limpiar">
+            </div>
+           </fieldset>
+          </form>
+        </div>
+       </section>
+    </main>
+    <footer class="footer">
+      <p>Autor: <span>Christian Sabat</span></p>
+      <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
+    </footer>
+  </body>
+
+</html>
