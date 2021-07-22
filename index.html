@@ -6,16 +6,27 @@
     <meta content="text/html" charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informatica Moderna</title>
-    <link rel="stylesheet" href="css\style.css">
+   
+    <link rel="stylesheet" href="css\animate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
     
+  <!--  <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css"> -->
+
+
+      
 </head>
-<body>
-    
+
+<body  class="container-fluid">
+   
+
     <!--PROBANDO SINCRONIZACION CON ONEDRIVE-->
     <!-- ESTE ES EL MENU QUE LO HICE DE VUELTA CON FLEXBOX   -->
     <header>
@@ -28,49 +39,152 @@
         
         </nav>
         <nav>
-          <ul class="menu__Flexbox">
-              <li ><a href="index.html">Inicio</a></li>
-              <li ><a href="secciones\sobrenosotros.html">Sobre Nosotros</a></li>
-              <li> <a href="secciones\servicios.html">Servicios</a></li>
-              <li><a href="secciones\software.html">Software</a></li>
-              <li><a href="secciones\contacto.html">Contacto</a></li>             
+          <ul  class="nav" >
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="secciones\sobrenosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item"> 
+                  <a class="nav-link" href="secciones\servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="secciones\software.html">Software</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="secciones\contacto.html">Contacto</a>
+              </li>      
+                   
           </ul>
          
         </nav>
+        
     </header> 
     
     <main>
         <!-- ACA ES EL TITULO H1 Y LE AGREGUE UNA CLASE PARA INCORPORAR UNA IMAGEN DE BACKGROUND DESDE CSS   -->
-        <div class="imagenPrincipal">
-            <h1 class="claseDeSeccion1__titulo1--portada">Informatica Moderna</h1>
-        </div>  
         
+        
+        
+        <!-- Carrusel de imagenes bootstrap con JS-->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
+             
+            <div class="carousel-inner">
+                
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/fotocarrusel2.jpg" alt="Primera foto">
+                <div class="carousel-caption d-none d-block ">
+                    
+                     <h1 class="claseDeSeccion1__titulo1--portada">Informatica Moderna</h1>        
+                       
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/fotocarrusel3.jpg" alt="Segunda foto">
+                <div class="carousel-caption d-none d-block">
+                    <h1 class="claseDeSeccion1__titulo1--portada">Informatica Moderna</h1>                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/fotocarrusel1.jpg" alt="Tercera foto">
+                <div class="carousel-caption d-none d-block">
+                    <h1 class="claseDeSeccion1__titulo1--portada">Informatica Moderna</h1>                  
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
         <!-- SECCION PRINCIPAL, ENCUADRA TODA LA PAGINA   -->
         <section class="claseDeSeccion1">
   	        
             <h2 class="claseDeSeccion1__titulo2">Quienes Somos</h2>
-            <table class="claseDeSeccion1__parrafo1">
-                <tr>
-                    <td><img src="img\fotoprincipal.jpg" class="claseDeSeccion1__redondeado"  width="140" height="100" alt="Foto principal"></td>
-                    <td><p>Somos una empresa informática con foco en infraestructura y desarrollo de software, combinamos los dos mundos para satisfacer las necesidades de nuestros clientes, brindando soluciones modernas para pequeñas y grandes empresas. Brindamos un alto nivel de atención en entender la necesidad del cliente para resolver obstáculos y desafíos en tiempo y forma. Somos un equipo joven con amplia experiencia en el rubro orientado a crecer y dinamizar los requerimientos del negocio.</p></td>
-                </tr>
-            </table>
-        
-           <!-- SECCION DE SERVICIOS PRINCIPALES, ACA INCORPORE  ! FLEXBOX !   -->
-            <h2 class="claseDeSeccion1__titulo2">Servicios Principales</h2>
-            
-            <section class="flexbox__Padre">
-                <div class="flexbox__Hijo"><img src="img\tecnologia.png" width="50px" height="50px"  alt="infra"><p class="flexbox__Hijo--parrafos">Infraestructura</p><br><p class="flexbox__Hijo--subtitulo" >Nivel 1,2 y 3 tecnologia Microsoft</p></div>
-                <div class="flexbox__Hijo"><img src="img\mensajeria-en-la-nube.png" width="50px" height="50px" alt="nube"><p class="flexbox__Hijo--parrafos">Nube</p><br><p class="flexbox__Hijo--subtitulo">Implementación o migración de servicios en la nube</p></div>
-                <div class="flexbox__Hijo"><img src="img\tecnologia2.png" width="50px" height="50px" alt="soporte"><p class="flexbox__Hijo--parrafos">Soporte</p><br><p class="flexbox__Hijo--subtitulo">Contrato a demanda con un paquete de horas</p></div>
-                <div class="flexbox__Hijo"><img src="img\tecnologia3.png" width="50px" height="50px" alt="consultoria"><p class="flexbox__Hijo--parrafos">Consultoria</p><br><p class="flexbox__Hijo--subtitulo">Asesoramiento en toma de decisiones de futuros proyectos</p></div>
-                <div class="flexbox__Hijo"><img src="img\software.png" width="50px" height="50px" alt="desarrollo"><p class="flexbox__Hijo--parrafos">Desarrollo</p><br><p class="flexbox__Hijo--subtitulo">Software a la medida de sus necesidades</p></div>
-                <div class="flexbox__Hijo"><img src="img\seguridad-informatica.png" width="50px" height="50px" alt="seguridad"><p class="flexbox__Hijo--parrafos">Seguridad y Respaldos</p><br><p class="flexbox__Hijo--subtitulo">Buen uso de respaldos y buenas practicas</p></div>
-                <div class="flexbox__Hijo"><img src="img\dominio.png" width="50px" height="50px" alt="web"><p class="flexbox__Hijo--parrafos">Paginas Web</p><br><p class="flexbox__Hijo--subtitulo">Sitios web adaptables a las necesidades de su empresa</p></div>
-                <div class="flexbox__Hijo"><img src="img\factura.png" width="50px" height="50px" alt="factelect"><p class="flexbox__Hijo--parrafos">Facturacion electronica</p><br><p class="flexbox__Hijo--subtitulo">Contamos con varias opciones a su alcance</p></div>
+            <section class="claseGridQuienesSomos">
+                <div class="QuienesFotoGrid">
+                    <img src="img\fotoprincipal.jpg" class="claseDeSeccion1__redondeado"  width="140" height="100" alt="Foto principal">
+                </div>
+                <div class="QuienesTextoGrid">
+                    <p>Somos una empresa informática con foco en infraestructura y desarrollo de software, combinamos los dos mundos para satisfacer las necesidades de nuestros clientes, brindando soluciones modernas para pequeñas y grandes empresas. Brindamos un alto nivel de atención en entender la necesidad del cliente para resolver obstáculos y desafíos en tiempo y forma. Somos un equipo joven con amplia experiencia en el rubro orientado a crecer y dinamizar los requerimientos del negocio.</p>
+                </div>
             </section>
           
-
+            
+            
+          
+          
+            <!-- SECCION DE SERVICIOS PRINCIPALES HECHO EN BOOTSTRAP   -->
+            <h2 class="claseDeSeccion1__titulo2">Servicios Principales</h2>
+           
+              <section class="contenedorCards d-flex flex-row justify-content-around flex-wrap"> <!--APLICO PROPIEDADES FLEX EN LA LINEA MISMA DE BS -->
+                <div class="card" style="width: 18rem;">
+                    <img src="img\tecnologia.png" class="card-img-top" alt="tecnologia">
+                    <div class="card-body">
+                      <h5 class="card-title">Infraestructura</h5>
+                      <p class="card-text">Nivel 1,2 y 3 tecnologia Microsoft</p>       
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\mensajeria-en-la-nube.png" class="card-img-top" alt="tecnologia2">
+                    <div class="card-body">
+                      <h5 class="card-title">Nube</h5>
+                      <p class="card-text">Implementación o migración de servicios en la nube</p>      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\tecnologia2.png" class="card-img-top" alt="tecnologia3">
+                    <div class="card-body">
+                      <h5 class="card-title">Soporte</h5>
+                      <p class="card-text">Contrato a demanda con un paquete de horas</p>      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\tecnologia3.png" class="card-img-top" alt="tecnologia4">
+                    <div class="card-body">
+                      <h5 class="card-title">Consultoria</h5>
+                      <p class="card-text">Asesoramiento en toma de decisiones de proyectos</p>      
+                    </div>
+                </div>
+              </section>
+              <section class="contenedorCards d-flex flex-row justify-content-around flex-wrap">
+                <div class="card" style="width: 18rem;">
+                    <img src="img\software.png" class="card-img-top" alt="tecnologia5">
+                    <div class="card-body">
+                      <h5 class="card-title">Desarrollo</h5>
+                      <p class="card-text">Software a la medida de sus necesidades</p>      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\seguridad-informatica.png" class="card-img-top" alt="tecnologia6">
+                    <div class="card-body">
+                      <h5 class="card-title">Seguridad y Respaldos</h5>
+                      <p class="card-text">Buen uso de respaldos y buenas practicas</p>      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\dominio.png" class="card-img-top" alt="tecnologia7">
+                    <div class="card-body">
+                      <h5 class="card-title">Paginas web</h5>
+                      <p class="card-text">Sitios web adaptados a las necesidades de su empresa</p>      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img\factura.png" class="card-img-top" alt="tecnologia8">
+                    <div class="card-body">
+                      <h5 class="card-title">Facturacion electronica</h5>
+                      <p class="card-text">Contamos con varias opciones a su alcance</p>      
+                    </div>
+                </div>
+              </section>
+            <!-- FIN DE SECCION DE SERVICIOS PRINCIPALES EN BOOSTRAP-->
         
              <!-- SECCION DE CLIENTES Y ALIANZAS   -->
             <section>
@@ -109,18 +223,43 @@
                     
                 </div>
             </section>
-            
-            
-            
-        
+           
         </section>
-    </main>
-    <!-- SECCION PIE DE PAGINA   -->
-    <footer class="footer">
-        <p>Autor: <span>Christian Sabat</span></p>
-        <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
-    </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">Quienes Somos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body">
+                        Aqui se brindará mas información respecto a la seccion "Quienes somos"
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                     </div>
+                </div>
+            </div>
+        </div>
+         <!-- SECCION PIE DE PAGINA   -->
     
+    </main>
+    <footer class="footer">
+      <p>Autor: <span>Christian Sabat</span></p>
+      <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
+  </footer>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   </body>
 
 </html>

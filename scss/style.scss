@@ -1,0 +1,648 @@
+@import 'variables';
+
+@mixin alto-ancho ($alto,$ancho) {   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
+    height: $alto;
+    width: $ancho;
+}
+
+
+/*CLASES PARA EL FUNCIONAMIENTO DEL GRID DE LA SECCION DE "EQUIPO DE TRABAJO" */
+
+
+/* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
+* {
+    Margin: 0;
+    padding:0;
+}
+
+.flexbox__Padre{
+    @include alto-ancho(auto,auto );  /*LLAMO AL MIXIN DE SASS */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    padding: 10px;
+    background: $color_principal;
+    margin: auto;
+    border:1px solid black;
+}
+
+.flexbox__Hijo {
+    @include alto-ancho((160),160 ); /*LLAMO AL MIXIN DE SASS */
+    background: burlywood;
+    border: 1px solid black;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.flexbox__Hijo:hover {
+    transform: scale(120%);
+}
+
+.flexbox__Hijo--parrafos {
+    font-family: $fuente_secundaria;
+    font-size: large;
+    font-weight: bold;
+    padding:0%;
+    margin:0%;
+    border:0px;
+   
+}
+.flexbox__Hijo--subtitulo {
+    font-family: $fuente_subtitulo;
+    font-size:small;
+    font-weight: bolder;
+    padding:0%;
+    margin:0%;
+    border:0px;
+   
+}
+
+/* ACA ESTAN LAS CLASES DE FLEXBOX PARA EL MENU, QUEDO EN DESUSO PORQUE APLIQUE NAV DE BOOTSTRAP LUEGO*/
+
+.menu__Flexbox{  //ACA APLIQUE SASS PARA "a" y media
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-start; 
+    margin: 0; 
+    background-color: $color_principal;
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        font-family: $fuente_secundaria;
+        font-weight: bold;
+        font-size: large;
+        color: white;
+        list-style-type: none;
+        margin: 0;
+        background-color: $color_principal;
+        top: 0;
+        &:hover{  /*AGRANDO UN POCO LAS PALABRAS DEL MENU AL PASAR RATON POR ARRIBA*/
+            background: #cccccc;
+            transform: scale(110%);
+        }
+    }
+    @media (max-width: 800px)/*ESTA PROPIEDAD PERMITE APLICAR SPACE-AROUND CUANDO EL ANCHO VISIBLE SEA MENOR O IGUAL A 800PX, VISUALMENTE SE VE MAS AGRADABLE */
+    {
+        justify-content: space-around;
+    }
+
+}
+
+
+/*CLASES FLEXBOX PARA LA SECCION DE CONTACTOS*/
+.flexboxContacto{
+    @include alto-ancho(auto,auto);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    padding: 40px;
+    background: #cccccc;
+    margin: auto;
+    
+}
+.flexboxContacto__Hijo{
+    @include alto-ancho(10,10);
+    background: #cccccc;
+    padding-top: 10px;
+    text-align: center;
+}
+.flexboxContacto__Hijo--parrafo{
+    font-family: $fuente_secundaria;
+    font-size: large;
+    font-weight: bold;
+}
+.flexboxContacto__Hijo--subtitulo {
+    font-family: $fuente_subtitulo;
+    font-size:small;
+    font-weight: bolder;
+   
+}
+
+/*APLIQUE SASS ESTRUCTURAL EN LA PARTE DE MEDIA */
+.flexboxContenedor{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin:10px;
+    padding:5px;
+    border: 1px solid black;
+    background-image:radial-gradient(#cccccc,grey);
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    @media (max-width:800px){
+            flex-wrap: wrap;
+    }
+}
+
+.flexboxContenedor__Titulo{
+    font-family: $fuente_secundaria;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+
+}
+.flexboxContenedor__Subtitulo{
+    font-family: $fuente_subtitulo;
+    font-size:large;
+    font-weight: bold;
+    margin-top:5%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+/*FIN DE CLASES DE FLEXBOX*/
+
+/*GRID */
+
+.claseGridLogo {
+    display:grid;
+    grid-template-areas: 
+    "logo iconos";    
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1;
+}
+
+/*APLIQUE SASS EN LA PARTE DE MEDIA */
+.claseGridClientes {
+    display:grid;
+    grid-template-areas: 
+    "cliente1 cliente2 cliente3 cliente4 cliente5 cliente6 cliente7";
+    
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 1;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+.claseGridQuienesSomos {
+    display: grid;
+    grid-template-areas: 
+    "quienes1 quienes2";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1;
+    @media (max-width: 600px)
+    {
+        grid-template-areas: 
+        "quienes1"
+        "quienes2";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+}
+
+.logoGrid{
+    grid-area: logo;
+}
+.iconosGrid{
+    grid-area: iconos;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 30px;
+}
+
+.QuienesFotoGrid{
+    grid-area: quienes1;
+}
+.QuienesTextoGrid{
+    grid-area: quienes2;
+}
+
+/*ESTE GRID ES EL DEL EQUIPO DE TRABAJO EN "SOBRE NOSOTROS", TAMBIEN APLIQUE SASS EN EL DIV*/
+.claseGridPrincipal {
+    display: grid;
+    grid-template-areas: 
+    "barra1 barra1 barra1 lateral"
+    "tecnico1 tecnico2 tecnico3 lateral"
+    "tecnico4 tecnico5 tecnico6 lateral"
+    "barra2 barra2 barra2 lateral";
+
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    border:1px solid black;
+    background: #cccccc;
+    div{
+        background: #cccccc;
+        border: 1px solid black;
+        padding: 20px;
+        font-size:medium;
+        font-family: $fuente_secundaria;
+    }
+     
+}
+
+.responsive {
+    width:100%;
+    height:auto;
+}
+
+.alineacion__derecha_iconos{
+    text-align: right;
+}
+
+/*BARRA ARRIBA ABAJO Y LATERAL PARA ADORNO DEL GRID DE SOBRE NOSOTROS*/
+
+.barra1{
+    padding: 10px;
+    grid-area: barra1;
+    background: $color_principal;
+    border: 1px solid black;
+    font-family: $fuente_secundaria;
+    font-weight: bold;
+    font-size:x-large;
+    text-align: center;
+    
+}
+.barra2{
+    grid-area: barra2;
+    background: $color_principal;
+    border: 1px solid black;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+
+    }
+    
+.barralateral{
+    grid-area: lateral;
+    background: $color_principal;
+    border: 1px solid black;
+    padding: 15px;
+    
+    
+}
+
+/* CHICHE PARA QUE APAREZCA RALLA VERTICAL EN LA BARRA LATERAL*/
+.textolateral{
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-size:xx-large;
+    
+}
+
+hr{  
+    border:         none;
+    border-left:    1px solid hsla(200, 10%, 50%,100);
+    height:         99%;
+    width:          1px;       
+}
+
+.tecnico1{
+    grid-area: tecnico1;
+    
+    
+}
+.tecnico2{
+    grid-area: tecnico2;
+   
+   
+}
+.tecnico3{
+    grid-area: tecnico3;
+    
+    
+}
+.tecnico4{
+    grid-area: tecnico4;
+    
+   
+    
+}
+.tecnico5{
+    grid-area: tecnico5;
+    
+   
+}
+.tecnico6{
+    grid-area: tecnico6;
+   
+}
+
+/*USO MIXIN EN TODAS LAS LLAMADAS A GRID */
+.cliente1{
+    @include alto-ancho(auto,70% ); 
+    grid-area: cliente1;
+}
+
+.cliente2{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente2;
+}
+.cliente3{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente3;
+}
+.cliente4{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente4;
+}
+.cliente5{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente5;
+}
+.cliente6{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente6;
+}
+.cliente7{
+    @include alto-ancho(auto,70% );
+    grid-area: cliente7;
+}
+/*FIN DE LAS CLASES VINCULADAS AL GRID */
+
+
+/* CLASES NORMALES DEL PROYECTO */
+
+/* en esta parte voy a instrumentar la parte de BEM*/
+.claseDeSeccion1 {
+    margin: 5px;
+    border: solid 2px $color_principal;
+    padding: 10px;
+    display: block;
+    background-color: #cccccc;
+    align-items: center;
+}
+.claseDeSeccion1__titulo1{
+    margin: auto;
+    color: $color_principal;
+    background-color: #f2acb9;  
+    padding: 1%;
+    width: 35%;
+    text-align: center;
+    border-radius: 25%;
+}
+.imagenPrincipal{
+    background-size:cover;
+    background-repeat: no-repeat;
+    image-orientation: from-image;
+    margin: auto;
+    border: 1px;
+    padding: 5px;
+    height:400px;
+    position: relative;
+}
+.claseDeSeccion1__titulo1--portada{
+    background-image: linear-gradient(to right,#cccccc, #a94d4d);
+    margin: auto;
+    transform: rotateY(360deg);
+    transition: transform 1s;
+    color: $color_principal;
+    background-color: #cccccc;
+    padding: 1%;
+    width: 70%;
+    text-align: center;
+    border-radius: 25%;
+    font-family: $fuente_principal;
+    font-size:xx-large;
+    font-weight: bold;
+    &:hover{
+        transform: rotateY(180deg);
+    }
+}
+
+
+
+.claseDeSeccion1__titulo2 {  /*APLICO SASS @IF PARA APLICAR O NO LOS GRADIENTES SEGUN VARIABLE*/
+    @if $activar_gradiente_h2 
+    {
+        background-image: linear-gradient(to right,$color_principal, #b6aaaa);
+    }
+    color:#F2F2F2;
+    background-color: $color_principal;
+    margin-left:1px;
+    margin-right:1px;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-family: $fuente_principal;
+    font-size:x-large;
+    font-weight: bold;
+}
+.claseDeSeccion1__titulo2--margenextra { /*APLICO SASS EXTEND PARA TOMAR LAS PROPIEDADES DE LA CLASE ESTA JUSTO ARRIBA*/
+    @extend .claseDeSeccion1__titulo2;
+    margin-top:40px;
+}
+.claseDeSeccion1__redondeado {
+    border-radius: 60px;
+}
+.claseDeSeccion1__parrafo1{
+    font-family: $fuente_secundaria;
+    font-size:large;
+    font-style:italic;
+}
+
+.claseDeSeccion1__tabla{
+    background-color: #f2f2f2;
+    text-align: center;
+    font-family: $fuente_secundaria;
+    font-size: large;
+    font-style:normal;
+    border: 1px;
+}
+.claseDeSeccion1__tablaMain {
+    background-color: #ecccd2;
+    border: 1px solid black;
+    font-family: $fuente_secundaria;
+}
+.claseDeSeccion1__tablaMain--celdas {
+    border: 1px solid $color_principal;
+    text-align: center;
+}
+.claseDeSeccion2 {
+    border: 1px solid $color_principal;
+    background-color: #cccccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top:20px;
+    
+}
+.claseDeSeccion2__titulo1{
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $color_principal;
+    background-color: #f2acb9;  
+    padding: 1%;
+    width: 35%;
+    text-align: center;
+    border-radius: 25%;
+}
+.claseDeSeccion2__titulo2{
+    color:#F2F2F2;
+    background-color: $color_principal;
+    margin-bottom:10px;
+}
+.claseDeSeccion2__retoques{
+    margin:auto;
+    padding:5px;
+}
+.claseDeSeccion2__legend{
+    color: black;
+    font-weight: bold;
+    margin-left:10px;
+    padding:2px;
+}
+.claseContenedorImagen { 
+    width: auto;
+    margin: 10px;
+    margin-top:30px;
+    padding-top:10px;
+    padding: 10px;
+    border: 3px solid #000;
+    background-color: #cccccc;
+}
+.marcoFormulario{
+    margin:10px;
+}
+
+.claseContenedorImagenPrincipal { 
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+   
+}
+.claseDeSeccion2__tablaMain {
+    background-color: #F2ACB9;
+    border: 1px solid black;
+    font-family: $fuente_secundaria;
+}
+.claseDeSeccion2__tablaMain--header {
+    background-color: $color_principal;
+    border: 1px solid black;
+    font-family: $fuente_secundaria;
+}
+
+/* fin de la parte de BEM */
+
+
+.seccionservicios{
+    background-color: #cccccc;
+}
+.seccionsoftware{
+    background-color: #cccccc;
+}
+
+
+.titulopagina {
+    background-color: $color_principal;
+}
+.menu {
+    background-color: #F2F2F2;
+    font-family: $fuente_secundaria;
+    font-weight: bold;
+    font-size: large;
+}
+.menu__pruebas{
+    text-align: center;
+}
+
+#italica {
+    font-style: italic;
+    font-size: large;
+}
+
+
+.clasetexto {
+    text-align: left;
+    line-height: 1.7;
+    text-decoration: none;
+}
+/*ESTILO PARA EL FORMULARIO DE CONTACTO */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /*ESTILO PARA EL FOOTER DE TODAS LAS PAGINAS */
+  .footer {
+    text-align: center;
+    padding: 3px;
+    background-color: $color_footer;
+    color: black;
+    span{
+        color: white;
+    }
+  }
+  
+
+/*CLASES QUE LE AGREGAN VALOR O METEN MODIFICACIONES A LAS CLASES DE BOOTSTRAP*/
+ /*NUEVA BARRA DE TITULO USANDO BOOTSTRAP Y CON ALGUN AGREGADO PERSONAL*/
+.nav{
+    background-color: $color_principal; 
+    color:#000;
+    font-weight: bold;
+    font-size: large;
+    padding:0.6rem;   
+    text-align: center;
+    align-items: center;
+    list-style: none;
+    @media (max-width: 800px)
+    {
+        justify-content: space-around;
+    }    
+}
+
+.nav-link{
+    color:white;
+    font-family: $fuente_secundaria;
+    font-weight: bold;
+    background-color: $color_principal;
+    text-decoration: none;
+    display: block; 
+    &:hover{  /*AGRANDO UN POCO LAS PALABRAS DEL MENU AL PASAR RATON POR ARRIBA*/
+        background: #cccccc;
+        transform: scale(110%);
+        color:white;
+    }
+}
+
+.contenedorCards {   /*ESTO SUPLANTA LOS SERVICIOS PRINCIPALES DEL INDEX CON CARDS DE BOOTSTRAP*/
+    display:flex;
+    flex-direction:row;
+    align-content:space-between;
+    justify-content: center;
+    width: 100%;
+} 
+.card{
+    margin:1rem;
+    background-color: #dfb5bd;
+    &:hover
+    {
+        transform: scale(120%);
+    }
+}
+
+.card-img-top{
+    width:80px;
+    height:80px;
+    margin-left:20%;
+}
+/*CON ESTO PROVOCO QUE EL CAPTION DE MI TITULO H1 DEL CARRUSEL QUEDE ARRIBA DEL TODO*/
+.carousel-caption {
+    position: absolute;
+    top:0px
+ }
+ /*CAMBIO EL ESTILO DEL BTN-PRIMARY PARA ABRIR EL MODAL DE PRUEBA*/
+ .btn-primary{
+     background-color: cornflowerblue;
+     border:0px;
+     border-radius: 10%;   
+ }
+ 
+
+
