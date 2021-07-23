@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="..\css\style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
@@ -48,9 +49,9 @@
       <section class="flexboxContenedor">
         <div class="mapouter">
           <div class="gmap_canvas">
-            <iframe width="482" height="378" id="gmap_canvas" src="https://maps.google.com/maps?q=simon%20bolivar%201260&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            <a href="https://fmovies2.org">fmovies to</a><br><style>.mapouter{position:relative;text-align:right;height:378px;width:482px;}</style><a href="https://www.embedgooglemap.net">responsive google map embed</a>
-            <style>.gmap_canvas {overflow:hidden;background:none!important;height:378px;width:482px;}</style>
+            <iframe class="modifmapa" src="https://maps.google.com/maps?q=simon%20bolivar%201260&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://fmovies2.org"></a><br><style>.mapouter{position:relative;text-align:right;height:378px;width:482px;}</style><a href="https://www.embedgooglemap.net"></a>
+           
           </div>
         </div>
         <div> 
@@ -65,42 +66,50 @@
            <fieldset>
             <legend class="claseDeSeccion2__legend">  Ingrese su solicitud </legend>
             <div style="padding: 20px">
-              <label for="nombre">Nombre</label>
+              <label for="nombre" style="font-weight: bold;font-style: italic">Nombre</label>
               <input type="text" name="nombre" maxlength="200" >
               <br>
-              <label for="apellido">Apellido</label>
+              <label for="apellido" style="font-weight: bold;font-style: italic">Apellido</label>
               <input type="text" name="apellido" maxlength="200">
               <br>
-              <label for="telefono">Telefono</label>
+              <label for="telefono" style="font-weight: bold;font-style: italic">Telefono</label>
               <input type="text" name="telefono" maxlength="20">
               <br>
-              <label for="telefono">E-mail</label>
+              <label for="telefono" style="font-weight: bold;font-style: italic">E-mail</label>
               <input type="text" name="telefono" maxlength="20">
             
               <br>
-              <div>Soy Profesional en Informatica
-              <input type="checkbox" name="prof" value="1"></div>
+              <label for="prof" style="font-weight: bold;font-style: italic">Soy profesional en informática</label>
+              <input type="checkbox" name="prof" value="1">
               <br>
-              <div>Seleccione su necesidad
+              <br>
+              <label for="necesidad" style="font-weight: bold;font-style: italic">Seleccione su necesidad</label>
                 <select name="necesidad">
                   <option value="desarrollo">Desarrollo de Software</option>
                   <option value="servicios1">Servicios Nivel 1</option>
                   <option value="servicios2">Servicios Nivel 2</option>
                   <option value="servicios3">Servicios Nivel 3</option>
                 </select>          
+              
+              <br><br>
+              <label for="Comentarios" style="font-weight: bold;font-style: italic">Ingrese comentarios</label>
+             
+              <input type="text" name="Comentarios" maxlength="200">
+              <br/>
+              <input class="btn btn-primary" type="submit" name="submit" value="enviar">
+              <input class="btn btn-primary" type="reset" name="reset" value="limpiar">
               </div>
-              <br>
-              <label for="Comentarios">Ingrese comentarios</label>
-              <br/>
-              <textarea name="Comentarios" maxlength="600"></textarea>
-              <br/>
-              <input type="submit" name="submit" value="enviar">
-              <input type="reset" name="reset" value="limpiar">
             </div>
            </fieldset>
           </form>
         </div>
        </section>
+       <!-- SECCION ICONO WHATSAPP FLOTANTE -->
+       <section>
+        <a href="https://api.whatsapp.com/send?phone=59899686379&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Servicios%202." class="whatsapp1" target="_blank">
+          <i class="fa fa-whatsapp whatsapp2"></i>
+         </a>
+      </section>
     </main>
     <footer class="footer">
       <p>Autor: <span>Christian Sabat</span></p>

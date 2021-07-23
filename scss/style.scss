@@ -4,7 +4,24 @@
     height: $alto;
     width: $ancho;
 }
+.whatsapp1{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:$color_principal;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
 
+.whatsapp2{
+	margin-top:16px;
+}
 
 /*CLASES PARA EL FUNCIONAMIENTO DEL GRID DE LA SECCION DE "EQUIPO DE TRABAJO" */
 
@@ -13,6 +30,12 @@
 * {
     Margin: 0;
     padding:0;
+}
+
+/* CLASE DE BOOTSTRAP QUE LA MODIFICO PARA QUE NO TENGA MARGENES Y LUZCA COMPLETA EN LOS BORDES DE LA PANTALLA */
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
 }
 
 .flexbox__Padre{
@@ -124,8 +147,9 @@
     font-weight: bolder;
    
 }
+/*ESTA CLASE ES PARA DARLE ESTILO EN LA PARTE DE CONTACTO AL MAPA DE GOOGLE Y LEYENDAS ADICIONALES*/
+/*APLIQUE SASS ESTRUCTURAL EN LA PARTE DE MEDIA, HICE AJUSTES ADICIONALES VINCULADOS AL MAPA DE GOOGLE PARA QUE SEA VEA TAMBIEN EN UN CELULAR */
 
-/*APLIQUE SASS ESTRUCTURAL EN LA PARTE DE MEDIA */
 .flexboxContenedor{
     display:flex;
     flex-direction: row;
@@ -137,10 +161,24 @@
     background-image:radial-gradient(#cccccc,grey);
     width: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
     @media (max-width:800px){
             flex-wrap: wrap;
     }
 }
+.gmap_canvas{ 
+    overflow: hidden;
+    background: none;
+    .modifmapa{
+        height:378px;
+        width:400px;
+    }
+    @media (max-width:500px){
+        width:340px;
+        margin-left:1rem;
+    }
+}
+
 
 .flexboxContenedor__Titulo{
     font-family: $fuente_secundaria;
@@ -366,9 +404,8 @@ hr{
 
 /* en esta parte voy a instrumentar la parte de BEM*/
 .claseDeSeccion1 {
-    margin: 5px;
-    border: solid 2px $color_principal;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     display: block;
     background-color: #cccccc;
     align-items: center;
@@ -427,6 +464,7 @@ hr{
     font-family: $fuente_principal;
     font-size:x-large;
     font-weight: bold;
+    
 }
 .claseDeSeccion1__titulo2--margenextra { /*APLICO SASS EXTEND PARA TOMAR LAS PROPIEDADES DE LA CLASE ESTA JUSTO ARRIBA*/
     @extend .claseDeSeccion1__titulo2;
@@ -461,10 +499,7 @@ hr{
 .claseDeSeccion2 {
     border: 1px solid $color_principal;
     background-color: #cccccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding-top:20px;
-    
 }
 .claseDeSeccion2__titulo1{
     margin-top:10px;
@@ -476,8 +511,13 @@ hr{
     width: 35%;
     text-align: center;
     border-radius: 25%;
+    
 }
 .claseDeSeccion2__titulo2{
+     @if $activar_gradiente_h2 
+    {
+        background-image: linear-gradient(to right,$color_principal, #b6aaaa);
+    }
     color:#F2F2F2;
     background-color: $color_principal;
     margin-bottom:10px;
@@ -489,6 +529,8 @@ hr{
 .claseDeSeccion2__legend{
     color: black;
     font-weight: bold;
+    font-family: $fuente_secundaria;
+    font-size: large;
     margin-left:10px;
     padding:2px;
 }
@@ -503,6 +545,12 @@ hr{
 }
 .marcoFormulario{
     margin:10px;
+}
+
+/*CARACTERISTICAS PERSONALES A LOS BOTONES DE BOOTSTRAP PARA EL FORMULARIO DE CONTACTO*/
+.btn-primary{
+    height:2rem;
+    width:4rem;
 }
 
 .claseContenedorImagenPrincipal { 
@@ -559,7 +607,7 @@ hr{
     text-decoration: none;
 }
 /*ESTILO PARA EL FORMULARIO DE CONTACTO */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=textarea], {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -623,7 +671,8 @@ input[type=text], input[type=password] {
     background-color: #dfb5bd;
     &:hover
     {
-        transform: scale(120%);
+        transform: scale(110%);
+        background-color: #d3667a;
     }
 }
 
