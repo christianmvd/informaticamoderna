@@ -1,5 +1,11 @@
 /* VARIABLE TRUE O FALSE PARA ACTIVAR O DESACTIVAR LOS GRADIENTES DEL PROYECTO EN LA ETIQUETA H2!*/
+* {
+  Margin: 0;
+  padding: 0;
+}
+
 .whatsapp1 {
+  /*ICONO DE WHATSAPP FLOTANTE */
   position: fixed;
   width: 60px;
   height: 60px;
@@ -18,19 +24,13 @@
   margin-top: 16px;
 }
 
-/*CLASES PARA EL FUNCIONAMIENTO DEL GRID DE LA SECCION DE "EQUIPO DE TRABAJO" */
-/* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
-* {
-  Margin: 0;
-  padding: 0;
-}
-
 /* CLASE DE BOOTSTRAP QUE LA MODIFICO PARA QUE NO TENGA MARGENES Y LUZCA COMPLETA EN LOS BORDES DE LA PANTALLA */
 .container-fluid {
   margin: 0px;
   padding: 0px;
 }
 
+/* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
 .flexbox__Padre {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
   height: auto;
@@ -170,6 +170,7 @@
   }
 }
 
+/*ESTILO PARA EL MAPA DE GOOGLE PARA QUE SE ADAPTE A CELULAR TAMBIEN CON @MEDIA */
 .gmap_canvas {
   overflow: hidden;
   background: none;
@@ -348,7 +349,7 @@ hr {
   grid-area: tecnico6;
 }
 
-/*USO MIXIN EN TODAS LAS LLAMADAS A GRID */
+/*USO MIXIN EN TODAS LAS LLAMADAS A GRID DE CLIENTES */
 .cliente1 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
   height: auto;
@@ -430,6 +431,7 @@ hr {
   position: relative;
 }
 
+/*ESTILO ESPECIAL PARA EL H1 DEL INDEX,TIENE UNA TRANSFORMACION CON HOVER */
 .claseDeSeccion1__titulo1--portada {
   background-image: linear-gradient(to right, #cccccc, #a94d4d);
   margin: auto;
@@ -516,6 +518,30 @@ hr {
   border-radius: 25%;
 }
 
+/*ANIMACION DE DESPLAZAMIENTO LEVE PARA LOS H1 DE LAS SECCIONES QUE NO SON INDEX */
+.animacion {
+  position: relative;
+  animation-name: deslizar;
+  animation-duration: 1s;
+}
+
+@keyframes deslizar {
+  0% {
+    background-color: #A63232;
+    left: -10rem;
+    top: 0px;
+  }
+  50% {
+    background-color: #A63232;
+    left: 0rem;
+    top: 20px;
+  }
+  100% {
+    background-color: #dfb5bd;
+    left: 10rem;
+    top: 0px;
+  }
+}
 .claseDeSeccion2__titulo2 {
   background-image: linear-gradient(to right, #A63232, #b6aaaa);
   color: #F2F2F2;
@@ -555,6 +581,7 @@ hr {
 .btn-primary {
   height: 2rem;
   width: 4rem;
+  background-color: cornflowerblue;
 }
 
 .claseContenedorImagenPrincipal {
@@ -598,11 +625,6 @@ hr {
 
 .menu__pruebas {
   text-align: center;
-}
-
-#italica {
-  font-style: italic;
-  font-size: large;
 }
 
 .clasetexto {
@@ -694,13 +716,6 @@ input[type=text], input[type=password], input[type=textarea] {
 .carousel-caption {
   position: absolute;
   top: 0px;
-}
-
-/*CAMBIO EL ESTILO DEL BTN-PRIMARY PARA ABRIR EL MODAL DE PRUEBA*/
-.btn-primary {
-  background-color: cornflowerblue;
-  border: 0px;
-  border-radius: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */

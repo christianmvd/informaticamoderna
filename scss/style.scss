@@ -4,7 +4,11 @@
     height: $alto;
     width: $ancho;
 }
-.whatsapp1{
+* {
+    Margin: 0;
+    padding:0;
+}
+.whatsapp1{ /*ICONO DE WHATSAPP FLOTANTE */
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -23,21 +27,13 @@
 	margin-top:16px;
 }
 
-/*CLASES PARA EL FUNCIONAMIENTO DEL GRID DE LA SECCION DE "EQUIPO DE TRABAJO" */
-
-
-/* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
-* {
-    Margin: 0;
-    padding:0;
-}
-
 /* CLASE DE BOOTSTRAP QUE LA MODIFICO PARA QUE NO TENGA MARGENES Y LUZCA COMPLETA EN LOS BORDES DE LA PANTALLA */
 .container-fluid{
     margin: 0px;
     padding: 0px;
 }
 
+/* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
 .flexbox__Padre{
     @include alto-ancho(auto,auto );  /*LLAMO AL MIXIN DE SASS */
     display: flex;
@@ -166,6 +162,8 @@
             flex-wrap: wrap;
     }
 }
+
+/*ESTILO PARA EL MAPA DE GOOGLE PARA QUE SE ADAPTE A CELULAR TAMBIEN CON @MEDIA */
 .gmap_canvas{ 
     overflow: hidden;
     background: none;
@@ -199,6 +197,7 @@
 /*FIN DE CLASES DE FLEXBOX*/
 
 /*GRID */
+
 
 .claseGridLogo {
     display:grid;
@@ -367,7 +366,7 @@ hr{
    
 }
 
-/*USO MIXIN EN TODAS LAS LLAMADAS A GRID */
+/*USO MIXIN EN TODAS LAS LLAMADAS A GRID DE CLIENTES */
 .cliente1{
     @include alto-ancho(auto,70% ); 
     grid-area: cliente1;
@@ -429,6 +428,7 @@ hr{
     height:400px;
     position: relative;
 }
+/*ESTILO ESPECIAL PARA EL H1 DEL INDEX,TIENE UNA TRANSFORMACION CON HOVER */
 .claseDeSeccion1__titulo1--portada{
     background-image: linear-gradient(to right,#cccccc, #a94d4d);
     margin: auto;
@@ -447,8 +447,6 @@ hr{
         transform: rotateY(180deg);
     }
 }
-
-
 
 .claseDeSeccion1__titulo2 {  /*APLICO SASS @IF PARA APLICAR O NO LOS GRADIENTES SEGUN VARIABLE*/
     @if $activar_gradiente_h2 
@@ -511,10 +509,21 @@ hr{
     width: 35%;
     text-align: center;
     border-radius: 25%;
-    
 }
+/*ANIMACION DE DESPLAZAMIENTO LEVE PARA LOS H1 DE LAS SECCIONES QUE NO SON INDEX */
+.animacion{
+    position:relative;
+    animation-name: deslizar;
+    animation-duration: 1s;
+   
+}
+@keyframes deslizar {
+    0%   {background-color:$color_principal; left:-10rem; top:0px;}
+    50%   {background-color:$color_principal; left:0rem; top:20px;}
+    100%  {background-color:$color_servicios_principales; left:10rem; top:0px;}
+  }
 .claseDeSeccion2__titulo2{
-     @if $activar_gradiente_h2 
+    @if $activar_gradiente_h2 
     {
         background-image: linear-gradient(to right,$color_principal, #b6aaaa);
     }
@@ -551,6 +560,7 @@ hr{
 .btn-primary{
     height:2rem;
     width:4rem;
+    background-color: cornflowerblue;
 }
 
 .claseContenedorImagenPrincipal { 
@@ -595,10 +605,7 @@ hr{
     text-align: center;
 }
 
-#italica {
-    font-style: italic;
-    font-size: large;
-}
+
 
 
 .clasetexto {
@@ -686,12 +693,7 @@ input[type=text], input[type=password], input[type=textarea], {
     position: absolute;
     top:0px
  }
- /*CAMBIO EL ESTILO DEL BTN-PRIMARY PARA ABRIR EL MODAL DE PRUEBA*/
- .btn-primary{
-     background-color: cornflowerblue;
-     border:0px;
-     border-radius: 10%;   
- }
+ 
  
 
 
