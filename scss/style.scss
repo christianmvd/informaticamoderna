@@ -26,6 +26,9 @@
 .whatsapp2{
 	margin-top:16px;
 }
+.fuente{
+    color:black;
+}
 
 /* CLASE DE BOOTSTRAP QUE LA MODIFICO PARA QUE NO TENGA MARGENES Y LUZCA COMPLETA EN LOS BORDES DE LA PANTALLA */
 .container-fluid{
@@ -136,6 +139,7 @@
     font-family: $fuente_secundaria;
     font-size: large;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 .flexboxContacto__Hijo--subtitulo {
     font-family: $fuente_subtitulo;
