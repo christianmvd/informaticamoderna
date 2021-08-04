@@ -2,7 +2,6 @@
   "name": "sass",
   "version": "1.0.0",
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
@@ -19,5 +18,4 @@
   },
   "homepage": "https://github.com/christianmvd/informaticamoderna#readme",
   "description": "Sitio Web de informatica, servicios informaticos de nivel 1,2 y 3 y desarrollo de sistemas informaticos"
-  
 }

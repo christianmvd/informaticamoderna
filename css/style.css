@@ -195,7 +195,10 @@
   font-family: "PT Sans Narrow", sans-serif;
   font-size: x-large;
   font-weight: bold;
+  font-style: italic;
   text-align: center;
+  text-decoration: underline;
+  color: #A63232;
 }
 
 .flexboxContenedor__Subtitulo {
@@ -220,10 +223,42 @@
 .claseGridClientes {
   display: grid;
   grid-template-areas: "cliente1 cliente2 cliente3 cliente4 cliente5 cliente6 cliente7";
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1;
-  grid-column-gap: 5px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  /*repeat(7,1fr);*/
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
   grid-row-gap: 5px;
+}
+@media (max-width: 850px) {
+  .claseGridClientes {
+    grid-template-areas: "cliente1 cliente2 cliente3 cliente4" "cliente5 cliente6 cliente7 .";
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+@media (max-width: 520px) {
+  .claseGridClientes {
+    grid-template-areas: "cliente1 cliente2 cliente3" "cliente4 cliente5 cliente6" " cliente7 . .";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.claseGridAlianzas {
+  display: grid;
+  grid-template-areas: "alianza1 alianza2 alianza3 alianza4";
+  grid-template-columns: auto auto auto auto;
+  /*repeat(7,1fr);*/
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5px;
+}
+@media (max-width: 520px) {
+  .claseGridAlianzas {
+    grid-template-areas: "alianza1 alianza2 alianza3" "alianza4 . .";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
 }
 
 .claseGridQuienesSomos {
@@ -357,51 +392,80 @@ hr {
 /*USO MIXIN EN TODAS LAS LLAMADAS A GRID DE CLIENTES */
 .cliente1 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
+  /*alto-ancho(auto,70% );*/
   grid-area: cliente1;
 }
 
 .cliente2 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente2;
 }
 
 .cliente3 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente3;
 }
 
 .cliente4 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente4;
 }
 
 .cliente5 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente5;
 }
 
 .cliente6 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente6;
 }
 
 .cliente7 {
   /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
-  height: auto;
-  width: 70%;
+  height: 100;
+  width: 120;
   grid-area: cliente7;
+}
+
+.alianza1 {
+  /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
+  height: 100;
+  width: 120;
+  grid-area: alianza1;
+}
+
+.alianza2 {
+  /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
+  height: 100;
+  width: 120;
+  grid-area: alianza2;
+}
+
+.alianza3 {
+  /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
+  height: 100;
+  width: 120;
+  grid-area: alianza3;
+}
+
+.alianza4 {
+  /*AGREGUE UN MIXIN DE SASS PARA UTILIZAR A LO LARGO DEL SCSS PARA APLICAR ALTO Y ANCHO DONDE CORRESPONDA*/
+  height: 100;
+  width: 120;
+  grid-area: alianza4;
 }
 
 /*FIN DE LAS CLASES VINCULADAS AL GRID */
@@ -483,6 +547,7 @@ hr {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: large;
   font-style: italic;
+  padding-bottom: 1rem;
 }
 
 .claseDeSeccion1__tabla {
