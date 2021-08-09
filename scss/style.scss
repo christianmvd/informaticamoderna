@@ -5,8 +5,8 @@
     width: $ancho;
 }
 * {
-    Margin: 0;
-    padding:0;
+    Margin: 0px;
+    padding:0px;
 }
 .whatsapp1{ /*ICONO DE WHATSAPP FLOTANTE */
 	position:fixed;
@@ -34,6 +34,7 @@
 .container-fluid{
     margin: 0px;
     padding: 0px;
+    
 }
 
 /* ACA ESTAN LAS CLASES DE FLEXBOX PARA  SERVICIOS PRINCIPALES, LUEGO FUERON SUSTITUIDAS POR BOOTSTRAP EN EL INDEX*/
@@ -167,6 +168,35 @@
     }
 }
 
+.flexboxContenedorQuienesSomos{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background-image:radial-gradient(#cccccc,grey);
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    @media (max-width:900px){
+            flex-wrap: wrap;
+            justify-content: center;
+    }
+    
+}
+.imagenahora
+{
+    @media (max-width:900px)
+    {
+        height:auto;
+        width:80%;
+    }
+    @media (max-width:450px){
+        height:auto;
+        width:100%;
+    }
+    
+}
+
 /*ESTILO PARA EL MAPA DE GOOGLE PARA QUE SE ADAPTE A CELULAR TAMBIEN CON @MEDIA */
 .gmap_canvas{ 
     overflow: hidden;
@@ -200,6 +230,15 @@
     margin-left:10%;
     margin-right:10%;
 }
+.flexboxContenedor__Subtitulo--directores
+{
+    padding-top: 1rem;
+    font-family: $fuente_subtitulo;
+    font-size:medium;
+    font-weight: lighter;
+    text-align: center;
+    
+}
 
 /*FIN DE CLASES DE FLEXBOX*/
 
@@ -216,6 +255,9 @@
 
 /*APLIQUE SASS EN LA PARTE DE MEDIA */
 .claseGridClientes {
+    margin-top:1rem;
+    padding-left: 3rem;
+    margin-bottom:1rem;
     display:grid;
     grid-template-areas: 
     "cliente1 cliente2 cliente3 cliente4 cliente5 cliente6 cliente7";
@@ -224,8 +266,9 @@
     grid-template-rows: auto;
     grid-column-gap: 2rem;
     grid-row-gap: 5px;
-    @media (max-width: 850px)
+    @media (max-width: 940px)
     {
+        padding-left:2rem;
         grid-template-areas:
         "cliente1 cliente2 cliente3 cliente4"
         "cliente5 cliente6 cliente7 .";
@@ -234,6 +277,7 @@
     }
     @media (max-width: 520px)
     {
+        padding-left:1rem;
         grid-template-areas:
         "cliente1 cliente2 cliente3"
         "cliente4 cliente5 cliente6"
@@ -244,6 +288,9 @@
 }
 .claseGridAlianzas {
     display:grid;
+    margin-top:1rem;
+    padding-left: 5rem;
+    padding-bottom:1rem;
     grid-template-areas: 
     "alianza1 alianza2 alianza3 alianza4";
    
@@ -251,8 +298,9 @@
     grid-template-rows: auto;
     grid-column-gap: 2rem;
     grid-row-gap: 5px;
-    @media (max-width: 520px)
+    @media (max-width: 720px)
     {
+        padding-left:1rem;
         grid-template-areas:
         "alianza1 alianza2 alianza3"
         "alianza4 . .";
@@ -264,13 +312,13 @@
 .claseGridQuienesSomos {
     display: grid;
     grid-template-areas: 
-    "quienes1 quienes2";
-    grid-template-columns: 20% 80%;
+    "quienes1 quienes2 quienes3";
+    grid-template-columns: 10% 80% 10%;
     grid-template-rows: 1;
     @media (max-width: 600px)
     {
         grid-template-areas: 
-        "quienes1"
+        "quienes1 quienes2"
         "quienes2";
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -292,6 +340,9 @@
 }
 .QuienesTextoGrid{
     grid-area: quienes2;
+}
+.QuienesFoto2Grid{
+    grid-area: quienes3;
 }
 
 /*ESTE GRID ES EL DEL EQUIPO DE TRABAJO EN "SOBRE NOSOTROS", TAMBIEN APLIQUE SASS EN EL DIV*/
@@ -316,6 +367,8 @@
         font-size:medium;
         font-family: $fuente_secundaria;
     }
+    margin-top: 2rem;
+    
      
 }
 
@@ -409,49 +462,94 @@ hr{
 
 /*USO MIXIN EN TODAS LAS LLAMADAS A GRID DE CLIENTES */
 .cliente1{
-    @include alto-ancho(100,120); /*alto-ancho(auto,70% );*/
+    @include alto-ancho(100,120); 
     grid-area: cliente1;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
+   
 }
 
 .cliente2{
     @include alto-ancho(100,120);
     grid-area: cliente2;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .cliente3{
     @include alto-ancho(100,120);
     grid-area: cliente3;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .cliente4{
     @include alto-ancho(100,120);
     grid-area: cliente4;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .cliente5{
     @include alto-ancho(100,120);
     grid-area: cliente5;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .cliente6{
     @include alto-ancho(100,120);
     grid-area: cliente6;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .cliente7{
     @include alto-ancho(100,120);
     grid-area: cliente7;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .alianza1{
     @include alto-ancho(100,120);
     grid-area: alianza1;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .alianza2{
     @include alto-ancho(100,120);
     grid-area: alianza2;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .alianza3{
     @include alto-ancho(100,120);
     grid-area: alianza3;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 .alianza4{
     @include alto-ancho(100,120);
     grid-area: alianza4;
+    transition: transform 1s;
+    &:hover{
+        transform:scale(120%);
+    }
 }
 /*FIN DE LAS CLASES VINCULADAS AL GRID */
 
@@ -494,7 +592,7 @@ hr{
     color: $color_principal;
     background-color: #cccccc;
     padding: 1%;
-    width: 70%;
+    width: 75%;
     text-align: center;
     border-radius: 25%;
     font-family: $fuente_principal;
@@ -514,7 +612,7 @@ hr{
     background-color: $color_principal;
     margin-left:1px;
     margin-right:1px;
-    margin-top:5px;
+    margin-top:2rem;
     margin-bottom:5px;
     font-family: $fuente_principal;
     font-size:x-large;
@@ -553,7 +651,7 @@ hr{
     text-align: center;
 }
 .claseDeSeccion2 {
-    border: 1px solid $color_principal;
+    
     background-color: #cccccc;
     padding-top:20px;
 }
@@ -587,7 +685,7 @@ hr{
     }
     color:#F2F2F2;
     background-color: $color_principal;
-    margin-bottom:10px;
+
 }
 .claseDeSeccion2__retoques{
     margin:auto;
@@ -603,12 +701,40 @@ hr{
 }
 .claseContenedorImagen { 
     width: auto;
-    margin: 10px;
-    margin-top:30px;
-    padding-top:10px;
-    padding: 10px;
-    border: 3px solid #000;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: #cccccc;
+}
+.directores{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    width:auto;
+    background-color: #cccccc;
+    margin-top:2rem;
+    
+}
+.directores__marco{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: #f1eeee;
+    padding: 1rem;
+    width: 300px;
+    height:auto;
+    
+}
+.directores__foto1{
+    
+}
+.directores__foto2{
+    
+}
+.claseContenedorImagenQuienesSomos { 
+    width: auto;
+   
 }
 .marcoFormulario{
     margin:10px;
@@ -662,10 +788,6 @@ hr{
 .menu__pruebas{
     text-align: center;
 }
-
-
-
-
 .clasetexto {
     text-align: left;
     line-height: 1.7;
@@ -751,6 +873,9 @@ input[type=text], input[type=password], input[type=textarea], {
     position: absolute;
     top:0px
  }
+.ninguno{
+    margin:0px;
+}
  
  
 

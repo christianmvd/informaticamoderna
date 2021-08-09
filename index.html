@@ -48,7 +48,7 @@
         <!-- ACA VA EL LOGO A LA IZQUIERDA Y UNOS ICONOS A LA DERECHA, ESTO VA ARRIBA DEL TODO   -->
         <nav class="claseGridLogo">
             
-               <a href="index.html"><img src="img\logo-informatica-moderna.JPG" class="logoGrid" width="150" height="100" alt="Informatica moderna"></a> 
+               <a href="index.html"><img src="img\logo-informatica-moderna.JPG" class="logoGrid" alt="Informatica moderna"></a> 
                 <p class="iconosGrid"><a href="https://wa.me/598996886379" target="_blank"><ion-icon name="logo-whatsapp" size="large" ></ion-icon></a><a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter" size="large" style="color: cadetblue"></ion-icon></a><a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></p>
             
         
@@ -77,7 +77,7 @@
         
     </header> 
     
-    <main>
+    <main style="background-color: #cccccc;">
         
 
         <!-- SECCION PRINCIPAL, ENCUADRA TODA LA PAGINA   -->
@@ -120,44 +120,48 @@
             </a>
          </div>
         </section>
-  	        
             <h2 class="claseDeSeccion1__titulo2">Quienes Somos</h2>
-            <section class="claseGridQuienesSomos">
-                <div class="QuienesFotoGrid">
-                    <img src="img\fotoprincipal.jpg" class="claseDeSeccion1__redondeado"  width="140" height="100" alt="Foto Quienes Somos">
-                </div>
-                <div class="QuienesTextoGrid">
-                    <p>Somos una empresa informática con foco en infraestructura y desarrollo de software, combinamos los dos mundos para satisfacer las necesidades de nuestros clientes, brindando soluciones modernas para pequeñas y grandes empresas. Brindamos un alto nivel de atención en entender la necesidad del cliente para resolver obstáculos y desafíos en tiempo y forma. Somos un equipo joven con amplia experiencia en el rubro orientado a crecer y dinamizar los requerimientos del negocio.</p>
-                </div>
-            </section>
+                <section class="flexboxContenedorQuienesSomos">   
+                    <img class="imagenahora" src="img\quienes-somos.jpg" alt="Quienes Somos">  
+                  <div>
+                    <p class="flexboxContenedor__Titulo">Nuestra empresa</p><p class="flexboxContenedor__Subtitulo">Somos una empresa informática con foco en infraestructura y desarrollo de software, combinamos los dos mundos para satisfacer las necesidades de nuestros clientes, brindando soluciones modernas para pequeñas y grandes empresas. Brindamos un alto nivel de atención en entender la necesidad del cliente para resolver obstáculos y desafíos en tiempo y forma. Somos un equipo joven con amplia experiencia en el rubro orientado a crecer y dinamizar los requerimientos del negocio.</p>
+                  </div>
+                
+                </section> 
+         </section>
         
             <!-- SECCION DE SERVICIOS PRINCIPALES HECHO EN BOOTSTRAP   -->
             <h2 class="claseDeSeccion1__titulo2">Servicios Principales</h2>
-           
+             
               <section class="contenedorCards d-flex flex-row justify-content-around flex-wrap"> <!--APLICO PROPIEDADES FLEX EN LA LINEA MISMA DE BS -->
+                
                 <div class="card" style="width: 18rem;">
-                    <img src="img\tecnologia.png" class="card-img-top" alt="Servicios de infraestructura">
+                  <a href="secciones/servicios.html#servicios-infra">
+                    <img src="img\tecnologia.png" class="card-img-top" alt="Servicios de infraestructura"></a>
                     <div class="card-body">
                       <h5 class="card-title">Infraestructura</h5>
                       <p class="card-text">Nivel 1,2 y 3 tecnologia Microsoft</p>       
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\mensajeria-en-la-nube.png" class="card-img-top" alt="servicios en la nube">
+                  <a href="secciones/servicios.html#servicios-respaldos">
+                    <img src="img\mensajeria-en-la-nube.png" class="card-img-top" alt="servicios en la nube"></a>
                     <div class="card-body">
                       <h5 class="card-title">Nube</h5>
                       <p class="card-text">Implementación o migración de servicios en la nube</p>      
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\tecnologia2.png" class="card-img-top" alt="Soporte tecnico nivel 1, 2 y 3">
+                  <a href="secciones/servicios.html#servicios-infra">
+                    <img src="img\tecnologia2.png" class="card-img-top" alt="Soporte tecnico nivel 1, 2 y 3"></a>
                     <div class="card-body">
                       <h5 class="card-title">Soporte</h5>
                       <p class="card-text">Contrato a demanda con un paquete de horas</p>      
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\tecnologia3.png" class="card-img-top" alt="consultoria para tomar de decisiones">
+                  <a href="secciones/servicios.html#servicios-nube">
+                    <img src="img\tecnologia3.png" class="card-img-top" alt="consultoria para tomar de decisiones"></a>
                     <div class="card-body">
                       <h5 class="card-title">Consultoria</h5>
                       <p class="card-text">Asesoramiento en toma de decisiones de proyectos</p>      
@@ -166,28 +170,32 @@
               </section>
               <section class="contenedorCards d-flex flex-row justify-content-around flex-wrap">
                 <div class="card" style="width: 18rem;">
-                    <img src="img\software.png" class="card-img-top" alt="desarrollo de software a medida">
+                  <a href="secciones/software.html#software-web">
+                    <img src="img\software.png" class="card-img-top" alt="desarrollo de software a medida"></a>
                     <div class="card-body">
                       <h5 class="card-title">Desarrollo</h5>
                       <p class="card-text">Software a la medida de sus necesidades</p>      
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\seguridad-informatica.png" class="card-img-top" alt="Seguridad y respaldos">
+                  <a href="secciones/servicios.html#servicios-respaldos">
+                    <img src="img\seguridad-informatica.png" class="card-img-top" alt="Seguridad y respaldos"></a>
                     <div class="card-body">
                       <h5 class="card-title">Seguridad y Respaldos</h5>
                       <p class="card-text">Buen uso de respaldos y buenas practicas</p>      
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\dominio.png" class="card-img-top" alt="Paginas web corporativas">
+                  <a href="secciones/servicios.html#servicios-paginas">
+                    <img src="img\dominio.png" class="card-img-top" alt="Paginas web corporativas"></a>
                     <div class="card-body">
                       <h5 class="card-title">Paginas web</h5>
                       <p class="card-text">Sitios web adaptados a las necesidades de su empresa</p>      
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="img\factura.png" class="card-img-top" alt="Facturacion electronica">
+                  <a href="secciones/servicios.html#servicios-factelec">
+                    <img src="img\factura.png" class="card-img-top" alt="Facturacion electronica"></a>
                     <div class="card-body">
                       <h5 class="card-title">Facturacion electronica</h5>
                       <p class="card-text">Contamos con varias opciones a su alcance</p>      
@@ -211,7 +219,7 @@
                 </nav>
                 
             </section>            
-            <section style="margin-top:1rem">
+            <section>
                 <h2 class="claseDeSeccion1__titulo2">Alianzas</h2>
                 <nav class="claseGridAlianzas">
             
@@ -225,6 +233,12 @@
             </section>
            
         </section>
+        
+        <!-- SECCION PIE DE PAGINA   -->
+        <footer class="footer">
+          <p>Autor: <span>Christian Sabat</span></p>
+          <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
+        </footer>
         <!-- SECCION ICONO WHATSAPP FLOTANTE -->
          <section>
             <a href="https://api.whatsapp.com/send?phone=59899686379&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Servicios%20." class="whatsapp1" target="_blank">
@@ -232,11 +246,7 @@
              </a>
         </section>
     </main>
-    <!-- SECCION PIE DE PAGINA   -->
-    <footer class="footer">
-      <p>Autor: <span>Christian Sabat</span></p>
-      <p><a href="mailto:csabat@sabat.uy">csabat@sabat.uy</a></p>
-  </footer>
+    
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();

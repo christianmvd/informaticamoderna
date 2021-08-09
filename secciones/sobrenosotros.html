@@ -6,7 +6,7 @@
     <meta content="text/html" charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Sobre Nosotros</title>
-    <link rel="stylesheet" href="..\css\style.css">
+   
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -27,14 +27,14 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="..\css\style.css">
 </head>
 <body>
-    
     <!--MENU PRINCIPAL -->
       <header>
         <nav class="claseGridLogo">
             
-          <a href="..\index.html"><img src="..\img\logo-informatica-moderna.JPG" class="logoGrid" width="150" height="100" alt="informatica moderna"></a> 
+          <a href="..\index.html"><img src="..\img\logo-informatica-moderna.JPG" class="logoGrid"  alt="informatica moderna"></a> 
           <p class="iconosGrid"><a href="https://wa.me/598996886379" target="_blank"><ion-icon name="logo-whatsapp" size="large" ></ion-icon></a><a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter" size="large" style="color: cadetblue"></ion-icon></a><a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></p>
         </nav>
         <nav >
@@ -47,23 +47,42 @@
           </ul>
         </nav>
       </header>
-      <main>    
+      <main style="background-color: #cccccc">    
+        
         <section class="claseDeSeccion2">
           <!-- SECCION SOBRE NOSOTROS -->
      
           <h1 class="claseDeSeccion2__titulo1 animacion">Sobre Nosotros</h1>
-          
           <div class="claseContenedorImagen">
-            <div class="claseDeSeccion1__parrafo1">
-              <p>Bienvenido a Informatica Moderna!, somos un equipo multidisciplinario con foco en brindarle la mejor atención para su empresa, es una agrado poder presentarle a nuestro equipo de trabajo el cual cuenta con soluciones en todas las áreas de la informática moderna</p>
-            </div>
-            
             <h2 class="claseDeSeccion2__titulo2">Trabajo en equipo</h2>
+            <div class="claseDeSeccion1__parrafo1">
+              <p>Bienvenido a Informatica Moderna!, somos un equipo multidisciplinario con foco en brindarle la mejor atención para su empresa, es una agrado poder presentarle a nuestro experimentado equipo de trabajo el cual cuenta con el conocimiento suficiente para ofrecerle solucionas rápidas y efectivas en todas las áreas informáticas</p>
+            </div>
             
             <img src="..\img\equipo-trabajo.jpg" width="100%"  alt="Sobre nosotros">
             
            
         
+        </section>
+        <section>  <!--SECCION DE DIRECTORES-->
+          <h2 class="claseDeSeccion2__titulo2">Nuestros directores</h2>
+          <div class="directores">
+            
+            <div class="directores__marco">
+              <img  src="../img/fotoprincipal.jpg" alt="Director Christian Sabat">
+              <p class="flexboxContenedor__Titulo">Christian Sabat</p>
+              <p class="flexboxContenedor__Subtitulo--directores">Director Desarrollo de Software</p>
+              <p class="flexboxContenedor__Subtitulo--directores"><a href="https://www.linkedin.com/in/christian-sabat-03b867101" target="_blank"><ion-icon name="logo-linkedin" size="large" style="color: cadetblue"></ion-icon></a></p>
+            </div>
+            <div class="directores__marco">
+              <img src="../img/juancarlos.jpg" alt="Director Juan Barrios">
+              <p class="flexboxContenedor__Titulo">Juan Barrios</p>
+              <p class="flexboxContenedor__Subtitulo--directores">Director Servicios TI</p>
+              <p class="flexboxContenedor__Subtitulo--directores"><a href="https://www.linkedin.com/in/juancarlosbarrios/" target="_blank"><ion-icon name="logo-linkedin" size="large" style="color: cadetblue"></ion-icon></a></p>
+            </div>
+          </div>
+        </section>
+
         </section>
         <section class="claseGridPrincipal"><!--ACA VA EL GRUPO DE TRABAJO HECHO CON GRIDS-->
           <nav class="barra1"><p>Equipo de trabajo</p></nav>
@@ -96,7 +115,7 @@
           <a href="https://api.whatsapp.com/send?phone=59899686379&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Servicios%202." class="whatsapp1" target="_blank">
             <i class="fa fa-whatsapp whatsapp2"></i>
            </a>
-      </section>
+         </section>
       </main>
       <!--SECCION FOOTER-->
       <footer class="footer">
