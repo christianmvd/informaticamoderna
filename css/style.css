@@ -389,6 +389,7 @@
   grid-area: barra2;
   background: #A63232;
   border: 1px solid black;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: x-large;
   font-weight: bold;
   text-align: center;
@@ -638,6 +639,8 @@ hr {
 }
 
 .claseDeSeccion1__parrafo1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: large;
   font-style: italic;
