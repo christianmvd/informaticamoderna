@@ -8,6 +8,7 @@
     Margin: 0px;
     padding:0px;
 }
+
 .whatsapp1{ /*ICONO DE WHATSAPP FLOTANTE */
 	position:fixed;
 	width:60px;
@@ -398,6 +399,7 @@
     grid-area: barra2;
     background: $color_principal;
     border: 1px solid black;
+    font-family: $fuente_secundaria;
     font-size: x-large;
     font-weight: bold;
     text-align: center;
@@ -627,6 +629,8 @@ hr{
     border-radius: 60px;
 }
 .claseDeSeccion1__parrafo1{
+    margin-left: 1rem;
+    margin-right: 1rem;
     font-family: $fuente_secundaria;
     font-size:large;
     font-style:italic;
@@ -702,7 +706,7 @@ hr{
 .claseContenedorImagen { 
     width: auto;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+   // margin-bottom: 2rem;
     background-color: #cccccc;
 }
 .directores{
@@ -737,7 +741,9 @@ hr{
    
 }
 .marcoFormulario{
-    margin:10px;
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:10px;
 }
 
 /*CARACTERISTICAS PERSONALES A LOS BOTONES DE BOOTSTRAP PARA EL FORMULARIO DE CONTACTO*/
